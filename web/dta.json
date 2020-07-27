@@ -1,0 +1,1 @@
+"SELECT `id` FROM `rubric` WHERE `parent_id` IN ('6', '7')"

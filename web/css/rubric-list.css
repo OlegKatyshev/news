@@ -1,0 +1,21 @@
+.rubric-list{
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
+.rubric-list ul{
+   padding-left: 20px;
+}
+.rubric-list .rubric-item{
+    list-style-type: none;
+}
+.rubric-item span {
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 90%;
+}
+.rubric-item span:hover {
+    background-color: #4169E1;
+    color: white;
+    cursor: pointer;
+}
