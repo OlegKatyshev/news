@@ -41,6 +41,31 @@ INSERT INTO `news` VALUES (1,'Ремонт дорог','Как сообщили 
 UNLOCK TABLES;
 
 --
+-- Table structure for table `rubric`
+--
+
+DROP TABLE IF EXISTS `rubric`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `rubric` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `parent_id` int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `rubric`
+--
+
+LOCK TABLES `rubric` WRITE;
+/*!40000 ALTER TABLE `rubric` DISABLE KEYS */;
+INSERT INTO `rubric` VALUES (1,'Общество',0),(2,'День города',0),(3,'Спорт',0),(4,'Городская жизнь',1),(5,'Выборы',1),(6,'Салюты',2),(7,'Детская площадка',2),(8,'0-3 года',7),(9,'3-7 года',7);
+/*!40000 ALTER TABLE `rubric` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `relations`
 --
 
@@ -67,30 +92,6 @@ INSERT INTO `relations` VALUES (1,4),(2,5),(3,2),(4,6),(5,7),(6,8),(7,9),(8,3);
 /*!40000 ALTER TABLE `relations` ENABLE KEYS */;
 UNLOCK TABLES;
 
---
--- Table structure for table `rubric`
---
-
-DROP TABLE IF EXISTS `rubric`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `rubric` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) DEFAULT NULL,
-  `parent_id` int(10) unsigned DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `rubric`
---
-
-LOCK TABLES `rubric` WRITE;
-/*!40000 ALTER TABLE `rubric` DISABLE KEYS */;
-INSERT INTO `rubric` VALUES (1,'Общество',0),(2,'День города',0),(3,'Спорт',0),(4,'Городская жизнь',1),(5,'Выборы',1),(6,'Салюты',2),(7,'Детская площадка',2),(8,'0-3 года',7),(9,'3-7 года',7);
-/*!40000 ALTER TABLE `rubric` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
